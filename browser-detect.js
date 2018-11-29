@@ -5,17 +5,17 @@
   */
 
 // Define userAgent
-let navUserAgent = navigator.userAgent;
+const navUserAgent = navigator.userAgent;
 
 // Define Browsers
-let firefoxBrowser = navUserAgent.search("Firefox");
-let torBrowser = firefoxBrowser;
-let chromeBrowser = navUserAgent.search("Chrome");
-let chromiumBrowser = chromeBrowser;
-let operaBrowser = navUserAgent.search("OPR");
-let edgeBrowser = navUserAgent.search("Edge");
-let ieBrowser = navUserAgent.search("Trident");
-let safariBrowser = navUserAgent.search("Safari");
+const firefoxBrowser = navUserAgent.search("Firefox");
+const torBrowser = firefoxBrowser;
+const chromeBrowser = navUserAgent.search("Chrome");
+const chromiumBrowser = chromeBrowser;
+const operaBrowser = navUserAgent.search("OPR");
+const edgeBrowser = navUserAgent.search("Edge");
+const ieBrowser = navUserAgent.search("Trident");
+const safariBrowser = navUserAgent.search("Safari");
 
 /**
 * This functionn returns the name of the browser. It has been tested on
@@ -24,28 +24,22 @@ let safariBrowser = navUserAgent.search("Safari");
 * @return string browser name
 */
 function detectBrowser() {
-    let browserName;
-
     if (firefoxBrowser >= 0) {
-         browserName = "firefox";
+        return "firefox";
     } else if (operaBrowser >= 0) {
-         browserName = "opera";
+        return "opera";
     } else if (ieBrowser >= 0) {
-         browserName = "ie";
+        return "ie";
     } else if (edgeBrowser >= 0) {
-         browserName = "edge";
+        return "edge";
     } else if (chromeBrowser >= 0) {
-        browserName = "chrome";
+        return "chrome";
     } else if (safariBrowser >= 0 && chromeBrowser < 0) {
-        browserName = "safari";
+        return "safari";
     } else {
-        browserName = "unknown";
+        return "unknown";
     };
-
-   return browserName;
 };
-
-detectBrowser();
 
 /**
 * @return boolean true if the browser is either Chrome or Chromium
@@ -120,7 +114,7 @@ function isSafari() {
 }
 
 /**
- * Tests
+ * Tests in Console
  */
 console.log('User Agent:', navUserAgent);
 console.log('You are using', (detectBrowser().toUpperCase()) , 'browser.');
