@@ -9,6 +9,7 @@ JavaScript Functions to Detect and Check for Major Browser Names
 - Opera
 - Edge
 - Internet Explorer
+- Safari
 
 ## Detect Browser
 To detect the browser, use the function `detectBrowser()`. The name of the browser will be returned.
@@ -22,6 +23,7 @@ These functions will return a boolean:
 - `isIE()` - checks if the user is using Internet Explorer
 - `isEdge()` - checks if the user is using Microsoft Edge
 - `isOpera()` - checks if the user is using Opera
+- `isSafari()` - checks if the user is using Apple Safari
 
 ## Note
 I highly appreciate feedback.
