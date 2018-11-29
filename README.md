@@ -1,5 +1,5 @@
 # browser-detect
-JavaScript Function to Detect Major Browser Names
+JavaScript Functions to Detect and Check for Major Browser Names
 
 ## Browsers
 - Chrome
